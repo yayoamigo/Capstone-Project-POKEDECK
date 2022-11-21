@@ -62,11 +62,31 @@ body {
 
 .header-link {
   font-size: 22px;
-  padding: 10px
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.link-icon {
+  height: 25px;
 }
 
 .header-link:hover {
   cursor: pointer;
   padding-bottom: 7px;
   border-bottom: 3px solid red;
+}
+
+@media (width<768px) {
+  .header-container {
+    padding: 0;
+  }
+  .header-links-container {
+    padding: 12px;
+    gap:0;
+  }
+  .header-link {
+    font-size: 16px;
+  }
 }
