@@ -13,8 +13,9 @@
         <img src="./assets/images/logo-pokemon-79x45.png" alt="Logo">
       </div>
       <ul class="header-links-container">
-        <li class="header-link"><img src="./assets/images/Poke_Ball_icon.svg" alt="list icon" class="link-icon"> <span class="link-title">Pokedex</span></li>
-        <li class="header-link">Categories</li>
+        <li class="header-link"> Pokedex</li>
+        <li class="header-link" id="categories">Categories</li>
+				<li class="header-link" id="random"> <img src="./assets/images/Poke_Ball_icon.svg" alt="list icon" class="link-icon"><span class="link-title">Random</span></li>
       </ul>
     </nav>
   </header>
@@ -23,29 +24,21 @@
    <h3 id="footer-title">Created by David and Martin under MIT license</h3>
   </div>
  </footer>
-  <div class="modal-background">
+  <div class="modal-background display-none">
     <div class="modal">
 			<div class="modal-title">Bulbasaur</div>
 			<div class="modal-content">
 				<div class="modal-left-container">
-					<div class="modal-image-container">
+					<div class="modal-image-container bg-animate">
 						<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="Pokemon1" class="modal-image">
 					</div>
 					<div class="modal-data-container">
 						<ul class="modal-data-list">
-							<li class="modal-data-item grass">grass</li>
-							<li class="modal-data-item poison">poison</li>
 						</ul>
 					</div>
 				</div>
 				<div class="modal-stats-container">
 					<ul class="modal-stats-list">
-						<li class="modal-stats-item"><p class="modal-stat-name">hp</p><p class="modal-stat-number">45</p></li>
-						<li class="modal-stats-item"><p class="modal-stat-name">attack</p><p class="modal-stat-number">49</p></li>
-						<li class="modal-stats-item"><p class="modal-stat-name">defense</p><p class="modal-stat-number">49</p></li>
-						<li class="modal-stats-item"><p class="modal-stat-name">special-attack</p><p class="modal-stat-number">65</p></li>
-						<li class="modal-stats-item"><p class="modal-stat-name">special-defense</p><p class="modal-stat-number">65</p></li>
-						<li class="modal-stats-item"><p class="modal-stat-name">speed</p><p class="modal-stat-number">45</p></li>
 					</ul>
 				</div>
 			</div>
@@ -68,5 +61,9 @@
 			<button type="button" class="button-close">&#10006</button>
 		</div>
   </div>
+	<div class="wrapper display-none">
+		<div class="pokeball">
+		</div>
+	</div>
 </body>
 </html>
