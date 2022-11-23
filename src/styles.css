@@ -160,7 +160,7 @@ body {
 .modal-stats-container {
   display: flex;
   justify-content: flex-start;
-  flex: 5
+  flex: 5;
 }
 .modal-stats-list {
   list-style: none;
@@ -215,36 +215,79 @@ body {
   gap: 12px;
   justify-content: center;
   align-items: center;
-  padding: 24px;
+  width: 100%;
 }
 .modal-comments {
   display: flex;
   flex-direction: column;
-  gap: 12px;
   align-items: center;
+  width: 100%;
+  border-bottom: 5px solid #ff7770;
 }
 .modal-comments-title {
   font-size: 24px;
   font-weight: bold;
+  width: 100%;
+  background-color: #ff7770;
+  border-radius: 0 100% 0 0;
+  padding: 0 20px;
+  color: white;
+  font-size: 48px;
+}
+.comments-count {
+  background-color: white;
+  color: #ff7770;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: -5px;
+  margin-left: 2px;
+  border-radius: 50%;
+  position: absolute;
 }
 .modal-comments-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap:8px;
   align-items:flex-start;
   justify-content: center;
+  width: 100%;
+}
+.modal-comments-item:nth-child(odd) {
+  background-color: #e5e5e5;
 }
 .modal-comments-item {
   display: flex;
   gap: 12px;
   align-items: center;
+  width: 100%;
+  padding: 5px;
+}
+.comment-date {
+  font-size: 10px;
+  font-weight: 800;
+  align-self: flex-start;
+}
+.comment-text {
+  font-size: 20px;
+}
+.comment-name {
+  font-weight: 800;
+}
+.comment-text {
+  font-style: italic;
+}
+.modal-form-container {
+  padding: 5px;
+  border-radius: 20px;
+  margin-bottom: 12px;
 }
 .modal-form-comment {
   display: flex;
   flex-direction: column;
   gap: 12px;
   padding: 24px;
+  background-color: #fff;
+  border-radius: 20px;
 }
 .modal-form-input {
   padding: 8px;
@@ -329,14 +372,14 @@ body {
     padding: 0;
   }
   .header-links-container {
-    padding: 12px;
+    padding: 0;
     gap:0;
   }
   .header-link {
-    font-size: 16px;
+    font-size: 14px;
   }
   .modal {
-    max-width: 80%;
+    max-width: 90%;
     overflow-y: scroll;
   }
   .modal-content {
