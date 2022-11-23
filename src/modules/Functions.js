@@ -5,8 +5,7 @@ const modalStatsList = document.querySelector('.modal-stats-list');
 const imageEndpoint = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/'
 const spinnerNode = document.querySelector('.wrapper');
 const modal = document.querySelector('.modal-background');
-//<li class="modal-data-item grass">grass</li>
-//<li class="modal-stats-item"><p class="modal-stat-name">hp</p><p class="modal-stat-number">45</p></li>
+
 const render = (data) => {
   const {id, name, sprites, stats, types} = data
   titleNode.textContent = name.toUpperCase();
