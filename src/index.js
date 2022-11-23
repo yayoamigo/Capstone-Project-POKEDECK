@@ -1,59 +1,109 @@
-import './styles.css'
-import {  loopPokemons } from './modules/pokemons';
-import { loopFirePokemons } from './categories/fire';
-import { loopWaterPokemons } from './categories/water';
+import './styles.css';
+import loopPokemons from './modules/pokemons.js';
+import loopFirePokemons from './modules/categories/fire.js';
+import loopWaterPokemons from './modules/categories/water.js';
+import loopFlyingPokemons from './modules/categories/flying.js';
+import loopBugsPokemons from './modules/categories/bugs.js';
+import loopDragonPokemons from './modules/categories/dragon.js';
+import loopElectricPokemons from './modules/categories/electric.js';
+import loopGhostPokemons from './modules/categories/ghost.js';
+import loopGrassPokemons from './modules/categories/grass.js';
+import loopGroundPokemons from './modules/categories/ground.js';
+import loopIcePokemons from './modules/categories/ice.js';
+import loopNormalPokemons from './modules/categories/normal.js';
+import loopPoisonPokemons from './modules/categories/poison.js';
+import loopPsychicPokemons from './modules/categories/psychic.js';
+import loopRockPokemons from './modules/categories/rock.js';
 
 const pokebtn = document.getElementById('poke');
 const catebtn = document.getElementById('catego');
 const home = document.querySelector('.home');
 const catego = document.querySelector('.categories');
-const activebtn = document.querySelectorAll('.activebtn');
-const parentDiv = document.querySelector('.pokemon-container');
-const electric = document.querySelectorAll('.electric');
-const normal = document.querySelectorAll('.normal');
-const fire = document.querySelectorAll('.fire');
-const water = document.querySelectorAll('.water');
-const ice = document.querySelectorAll('.ice');
-const rock = document.querySelectorAll('.rock');
-const flying = document.querySelectorAll('.flying');
-const grass = document.querySelectorAll('.grass');
-const ghost = document.querySelectorAll('.ghost');
-const bug = document.querySelectorAll('.bug');
-const poison = document.querySelectorAll('.poison');
-const ground = document.querySelectorAll('.ground');
-const fighting = document.querySelectorAll('.fighting');
-const dragon = document.querySelectorAll('.dragon');
-const steel= document.querySelectorAll('.steel');
 
-
-
- 
-
-//Toogle pages --start--
+// Toogle pages --start--
 const addDisplayPoke = () => {
- home.classList.replace('none', 'active');
- catego.classList.replace('active', 'none');
- }
- 
- const addDisplayBtn = () => {
+  home.classList.replace('none', 'active');
+  catego.classList.replace('active', 'none');
+};
+
+const addDisplayBtn = () => {
   home.classList.replace('active', 'none');
- catego.classList.replace('none', 'active');
- }
+  catego.classList.replace('none', 'active');
+};
 
 pokebtn.addEventListener('click', addDisplayPoke);
 catebtn.addEventListener('click', addDisplayBtn);
 
-//Toogle pages --end--
+// Toogle pages --end--
 
- const firebtn = document.getElementById('Fire');
- firebtn.addEventListener('click', function(){
-  loopFirePokemons(200);
-})
- const waterbtn = document.getElementById('Water');
- waterbtn.addEventListener('click', function(){
-  loopWaterPokemons(200);
-})
+const fireBtn = document.getElementById('Fire');
+fireBtn.addEventListener('click', () => {
+  loopFirePokemons(300);
+});
 
+const waterBtn = document.getElementById('Water');
+waterBtn.addEventListener('click', () => {
+  loopWaterPokemons(300);
+});
 
+const poisonBtn = document.getElementById('Poison');
+poisonBtn.addEventListener('click', () => {
+  loopPoisonPokemons(300);
+});
 
-loopPokemons(180)
+const groundBtn = document.getElementById('Ground');
+groundBtn.addEventListener('click', () => {
+  loopGroundPokemons(300);
+});
+
+const flyingdBtn = document.getElementById('Flying');
+flyingdBtn.addEventListener('click', () => {
+  loopFlyingPokemons(300);
+});
+
+const ghostBtn = document.getElementById('Ghost');
+ghostBtn.addEventListener('click', () => {
+  loopGhostPokemons(300);
+});
+
+const normalBtn = document.getElementById('Normal');
+normalBtn.addEventListener('click', () => {
+  loopNormalPokemons(200);
+});
+
+const bugBtn = document.getElementById('Bugs');
+bugBtn.addEventListener('click', () => {
+  loopBugsPokemons(300);
+});
+
+const psychicBtn = document.getElementById('Psychic');
+psychicBtn.addEventListener('click', () => {
+  loopPsychicPokemons(300);
+});
+
+const dragonBtn = document.getElementById('Dragon');
+dragonBtn.addEventListener('click', () => {
+  loopDragonPokemons(300);
+});
+
+const electricBtn = document.getElementById('Electric');
+electricBtn.addEventListener('click', () => {
+  loopElectricPokemons(300);
+});
+
+const grassBtn = document.getElementById('Grass');
+grassBtn.addEventListener('click', () => {
+  loopGrassPokemons(300);
+});
+
+const iceBtn = document.getElementById('Ice');
+iceBtn.addEventListener('click', () => {
+  loopIcePokemons(300);
+});
+
+const rockBtn = document.getElementById('Rock');
+rockBtn.addEventListener('click', () => {
+  loopRockPokemons(300);
+});
+
+loopPokemons(200);
