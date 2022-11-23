@@ -46,15 +46,14 @@
 			<div class="modal-comments">
 				<p class="modal-comments-title">Comments <span class="comments-count">2</span></p>
 				<ul class="modal-comments-list">
-					<li class="modal-comments-item"><p class="comment-date">03/11/2021</p><p class="comment-text-container"><span class="comment-name">Alex</span>: <span class="comment-text">I'd love this</span></p></li>
-					<li class="modal-comments-item"><p class="comment-date">03/11/2021</p><p class="comment-text-container"><span class="comment-name">Marin</span>: <span class="comment-text">I have all of this</span></p></li>
 				</ul>
 			</div>
 			<div class="modal-form-container bg-animate">
 				<form class="modal-form-comment">
 					<p class="modal-form-title">Add a comment</p>
-					<input class="modal-form-input" type="text" name="name" id="name" placeholder="Your name">
-					<input class="modal-form-input" type="text" name="insights" id="insights" placeholder="Your comment">
+					<input class="modal-form-input" type="text" name="name" id="name" placeholder="Your name" required>
+					<input class="modal-form-input" type="text" name="comment" id="comment" placeholder="Your comment" required>
+					<input type="hidden" name="item_id" id="item_id">
 					<input class="modal-form-button" type="submit" value="Comment">
 				</form>
 			</div>

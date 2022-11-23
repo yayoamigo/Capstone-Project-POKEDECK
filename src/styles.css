@@ -252,7 +252,7 @@ body {
   justify-content: center;
   width: 100%;
 }
-.modal-comments-item:nth-child(odd) {
+.modal-comments-item:nth-child(even) {
   background-color: #e5e5e5;
 }
 .modal-comments-item {
