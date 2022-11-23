@@ -11,7 +11,6 @@ body {
   box-sizing: border-box;
   background: linear-gradient(#ff473d, #ff7770);
   background-repeat: no-repeat;
-<<<<<<< HEAD
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -25,30 +24,25 @@ body {
 
 .none {
   display: none;
-=======
   height: 100vh;
   margin: 0;
   padding: 0;
   position: relative;
   overflow-y: hidden;
   overflow-x: hidden;
->>>>>>> f09b4d5b53f81312e6dde9ef9fb2bdf202c63305
 }
 
 #footer-div {
   display: flex;
   border: 1px solid black;
-<<<<<<< HEAD
   bottom: 0;
   width: 100%;
   justify-content: center;
   margin-top: 12%;
-=======
   position: absolute;
   bottom: 0;
   width: 100%;
   justify-content: center;
->>>>>>> f09b4d5b53f81312e6dde9ef9fb2bdf202c63305
 }
 
 .header-container {
@@ -121,9 +115,7 @@ body {
   border-bottom: 3px solid red;
 }
 
-<<<<<<< HEAD
 @media (width < 768px) {
-=======
 .modal-background {
   position: fixed;
   left: 0;
@@ -440,17 +432,13 @@ body {
 }
 
 @media (width < 769px) {
->>>>>>> f09b4d5b53f81312e6dde9ef9fb2bdf202c63305
   .header-container {
     padding: 0;
   }
 
   .header-links-container {
-<<<<<<< HEAD
     padding: 12px;
-=======
     padding: 0;
->>>>>>> f09b4d5b53f81312e6dde9ef9fb2bdf202c63305
     gap: 0;
   }
 
@@ -481,7 +469,6 @@ body {
   }
 }
 
-<<<<<<< HEAD
 .pokemon-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -685,7 +672,8 @@ body {
   cursor: pointer;
   color: #3466af;
   background: #ffcb05;
-=======
+} 
+
 .display-none {
   display: none;
 }
@@ -745,5 +733,4 @@ body {
   0% { background-position: 0% 51%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 51%; }
->>>>>>> f09b4d5b53f81312e6dde9ef9fb2bdf202c63305
 }

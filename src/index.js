@@ -1,5 +1,4 @@
 import './styles.css';
-<<<<<<< HEAD
 import loopPokemons from './modules/pokemons.js';
 import loopFirePokemons from './modules/categories/fire.js';
 import loopWaterPokemons from './modules/categories/water.js';
@@ -39,7 +38,8 @@ catebtn.addEventListener('click', addDisplayBtn);
 
 const fireBtn = document.getElementById('Fire');
 fireBtn.addEventListener('click', () => {
-  loopFirePokemons(300);
+  //loopFirePokemons(300);
+  loopPokemons(300,'fire');
 });
 
 const waterBtn = document.getElementById('Water');
@@ -108,7 +108,6 @@ rockBtn.addEventListener('click', () => {
 });
 
 loopPokemons(200);
-=======
 import Pokemon from './modules/Pokemon.js';
 import Comment from './modules/Comments.js';
 import { show, spinner } from './modules/Functions.js';
@@ -154,4 +153,3 @@ form.addEventListener('submit', (e) => {
       }
     });
 });
->>>>>>> f09b4d5b53f81312e6dde9ef9fb2bdf202c63305

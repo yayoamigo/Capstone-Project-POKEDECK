@@ -1,4 +1,5 @@
-const renderPokemons = (pokemon) => {
+const renderPokemons = (pokemon, category) => {
+  console.log(category)
   const pokemonContainer = document.querySelector('.pokemon-container');
   const card = document.createElement('div');
   card.classList.add('pokemonBlock');
@@ -29,17 +30,18 @@ const renderPokemons = (pokemon) => {
   card.appendChild(TYPE);
 
   pokemonContainer.appendChild(card);
+  
 };
 
-const fetchPokemons = async (id) => {
+const fetchPokemons = async (id, category) => {
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`);
   const data = await response.json();
-  renderPokemons(data);
+  renderPokemons(data, category);
 };
 
-const loopPokemons = (number) => {
+const loopPokemons = (number, category) => {
   for (let i = 1; i <= number; i += 1) {
-    fetchPokemons(i);
+    fetchPokemons(i, category);
   }
 };
 
