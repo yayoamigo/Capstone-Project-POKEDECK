@@ -14,7 +14,7 @@ closeButton.addEventListener('click', () => {
 
 random.addEventListener('click', () => {
   spinner(true);
-  const randomNumber = Math.ceil(Math.random() * 1153) + 1;
+  const randomNumber = Math.ceil(Math.random() * 800) + 1;
   Pokemon.getPokemon(randomNumber).then(
     (result) => show(result),
   );

@@ -1,4 +1,5 @@
 import Comment from './Comments.js';
+import commentsCount from './CommentsCounter.js';
 
 const titleNode = document.querySelector('.modal-title');
 const imageNode = document.querySelector('.modal-image');
@@ -25,7 +26,9 @@ const render = (data) => {
   } = data;
   const comments = result.error ? [] : result;
   itemIdNode.value = id;
-  count.textContent = comments.length;
+  commentsCount(id).then(
+    result => count.textContent = result
+  );
   titleNode.textContent = name.toUpperCase();
   imageNode.src = `${imageEndpoint}${id}.png`;
   modalStatsList.innerHTML = '';

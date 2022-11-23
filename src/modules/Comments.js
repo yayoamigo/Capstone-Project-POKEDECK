@@ -4,9 +4,16 @@ const apiKey = process.env.COMMENTS_KEY;
 export default class Comment {
   static getComments = async (id) => {
     const URL = `${endpoint}${apiKey}/comments?item_id=${id}`;
-    const result = await fetch(URL)
-      .then((data) => data.json());
-    return result;
+    try {
+      const result = await fetch(URL)
+      .then((data) => data.json())
+      if(result.error) {
+        return [];
+      }
+      return result;
+    } catch (error) {
+      console.log('TRYCATCH ERROR', error)
+      }
   }
 
   static postComments = async (data) => {
