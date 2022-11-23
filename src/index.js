@@ -14,7 +14,14 @@ import loopNormalPokemons from './modules/categories/normal.js';
 import loopPoisonPokemons from './modules/categories/poison.js';
 import loopPsychicPokemons from './modules/categories/psychic.js';
 import loopRockPokemons from './modules/categories/rock.js';
+import Pokemon from './modules/Pokemon.js';
+import Comment from './modules/Comments.js';
+import { show, spinner } from './modules/Functions.js';
 
+const closeButton = document.querySelector('.button-close');
+const modal = document.querySelector('.modal-background');
+const random = document.querySelector('#random');
+const form = document.querySelector('.modal-form-comment');
 const pokebtn = document.getElementById('poke');
 const catebtn = document.getElementById('catego');
 const home = document.querySelector('.home');
@@ -107,16 +114,6 @@ rockBtn.addEventListener('click', () => {
 });
 
 loopPokemons(200);
-;
-import Pokemon from './modules/Pokemon.js';
-import Comment from './modules/Comments.js';
-import { show, spinner } from './modules/Functions.js';
-
-const closeButton = document.querySelector('.button-close');
-const modal = document.querySelector('.modal-background');
-const random = document.querySelector('#random');
-const form = document.querySelector('.modal-form-comment');
-
 closeButton.addEventListener('click', () => {
   modal.classList.add('display-none');
 });

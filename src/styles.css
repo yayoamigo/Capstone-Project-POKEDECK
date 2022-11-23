@@ -2,20 +2,20 @@
 
 * {
   box-sizing: border-box;
-  margin:0;
+  margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
 }
 
 body {
-   box-sizing: border-box;
-   background: linear-gradient(#ff473d, #ff7770);
-   background-repeat: no-repeat;
-   min-height: 100vh;
-   margin: 0;
-   padding: 0;
-   position: relative;
-    overflow-x: hidden;
+  box-sizing: border-box;
+  background: linear-gradient(#ff473d, #ff7770);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .active {
@@ -27,12 +27,12 @@ body {
 }
 
 #footer-div {
- display: flex;
- border: 1px solid black;
- position: absolute;
- bottom: 0;
- width: 100%;  
- justify-content: center;
+  display: flex;
+  border: 1px solid black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
 }
 
 .header-container {
@@ -45,7 +45,7 @@ body {
   height: 72px;
   background-color: white;
   color: black;
-  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0 25px 20px -20px;
   padding-inline: 5%;
 }
 
@@ -348,75 +348,75 @@ body {
   background: linear-gradient(#ff473d, #ff7770);
 }
 
-.normal {
+.bg-normal {
   background-color: #a4acaf;
 }
 
-.water {
+.bg-water {
   background-color: #4592c4;
 }
 
-.fire {
+.bg-fire {
   background-color: #fd7d24;
 }
 
-.psychic {
+.bg-psychic {
   background-color: #f366b9;
 }
 
-.steel {
+.bg-steel {
   background-color: #9eb7b8;
 }
 
-.ice {
+.bg-ice {
   background-color: #51c4e7;
 }
 
-.ghost {
+.bg-ghost {
   background-color: #7b62a3;
 }
 
-.fighting {
+.bg-fighting {
   background-color: #d56723;
 }
 
-.rock {
+.bg-rock {
   background-color: #a38c21;
 }
 
-.bug {
+.bg-bug {
   background-color: #729f3f;
 }
 
-.flying {
+.bg-flying {
   background-color: #3dc7ef;
 }
 
-.grass {
+.bg-grass {
   background-color: #86a358;
 }
 
-.poison {
+.bg-poison {
   background-color: #b87fc8;
 }
 
-.electric {
+.bg-electric {
   background-color: #eed535;
 }
 
-.ground {
+.bg-ground {
   background-color: #ab9842;
 }
 
-.fairy {
+.bg-fairy {
   background-color: #fdb9e9;
 }
 
-.dragon {
+.bg-dragon {
   background-color: #f16e57;
 }
 
-.dark {
+.bg-dark {
   background-color: #707070;
 }
 
@@ -427,8 +427,9 @@ body {
 
   .header-links-container {
     padding: 12px;
-    gap:0;
+    gap: 0;
   }
+
   .header-link {
     font-size: 14px;
   }
