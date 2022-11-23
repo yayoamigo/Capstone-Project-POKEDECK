@@ -1,36 +1,48 @@
+function removeChildNodes(parent) {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+  }
+}
+
 const renderPokemons = (pokemon, category) => {
-  console.log(category)
-  const pokemonContainer = document.querySelector('.pokemon-container');
-  const card = document.createElement('div');
-  card.classList.add('pokemonBlock');
   const types = pokemon.types[0].type.name;
+  let pokemonContainer;
+  if (category === undefined) {
+    pokemonContainer = document.querySelector('.pokemon-container');
+  } else {
+    pokemonContainer = document.querySelector('.pokemon-container-group');
+  }
 
-  const gifContainer = document.createElement('div');
-  gifContainer.classList.add('gifContainer');
+  if (category === undefined || category === types) {
+    const card = document.createElement('div');
+    card.classList.add('pokemonBlock');
 
-  const gif = document.createElement('img');
-  gif.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${pokemon.id}.gif`;
-  gif.classList.add(`${types}`);
-  gifContainer.appendChild(gif);
+    const gifContainer = document.createElement('div');
+    gifContainer.classList.add('gifContainer');
 
-  const number = document.createElement('p');
-  number.textContent = `#${pokemon.id}`;
+    const gif = document.createElement('img');
+    gif.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${pokemon.id}.gif`;
+    gif.classList.add(`${types}`);
+    gifContainer.appendChild(gif);
 
-  const name = document.createElement('p');
-  name.classList.add('name');
-  name.textContent = pokemon.name;
+    const number = document.createElement('p');
+    number.textContent = `#${pokemon.id}`;
 
-  const TYPE = document.createElement('p');
-  TYPE.classList.add('TYPE');
-  TYPE.textContent = types.toUpperCase();
+    const name = document.createElement('p');
+    name.classList.add('name');
+    name.textContent = pokemon.name;
 
-  card.appendChild(gifContainer);
-  card.appendChild(number);
-  card.appendChild(name);
-  card.appendChild(TYPE);
+    const TYPE = document.createElement('p');
+    TYPE.classList.add('TYPE');
+    TYPE.textContent = types.toUpperCase();
 
-  pokemonContainer.appendChild(card);
-  
+    card.appendChild(gifContainer);
+    card.appendChild(number);
+    card.appendChild(name);
+    card.appendChild(TYPE);
+
+    pokemonContainer.appendChild(card);
+  }
 };
 
 const fetchPokemons = async (id, category) => {
@@ -40,6 +52,8 @@ const fetchPokemons = async (id, category) => {
 };
 
 const loopPokemons = (number, category) => {
+  const pokemonContainerGroup = document.querySelector('.pokemon-container-group');
+  removeChildNodes(pokemonContainerGroup);
   for (let i = 1; i <= number; i += 1) {
     fetchPokemons(i, category);
   }

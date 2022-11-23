@@ -115,7 +115,6 @@ body {
   border-bottom: 3px solid red;
 }
 
-@media (width < 768px) {
 .modal-background {
   position: fixed;
   left: 0;
@@ -238,6 +237,7 @@ body {
   padding: 10px;
   border-radius: 50%;
 }
+
 
 .modal-data-list {
   list-style: none;
