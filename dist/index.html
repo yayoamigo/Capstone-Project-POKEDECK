@@ -7,10 +7,92 @@
  <title>PokeDeck</title>
 <script defer src="bundle.js"></script></head>
 <body>
+  <header class="header-container">
+    <nav class="header-nav">
+      <div class="logo-container">
+        <img src="./assets/images/logo-pokemon-79x45.png" alt="Logo">
+      </div>
+      <ul class="header-links-container">
+        <li class="header-link"><img src="./assets/images/Poke_Ball_icon.svg" alt="list icon" class="link-icon"> <span class="link-title"><button id="poke">Pokedex</button></span></li>
+        <li class="header-link"><button id="catego">Categories</button> </li>
+      </ul>
+    </nav>
+  </header>
+  <section class="home active"> 
+  <div class="pokemon-container">
+
+  </div>
+</section>
+<section class="categories none">
+<div id="btns">
+<button id="Fire" class="activebtn">Fire</button>
+<button id="Water" class="activebtn">Water</button>
+<button id="Bugs" class="activebtn">Bugs</button>
+<button id="Ground" class="activebtn">Ground</button>
+<button id="Ice" class="activebtn">Ice</button>
+<button id="Electric" class="activebtn">Electric</button>
+<button id="Poison" class="activebtn">Poison</button>
+<button id="Normal" class="activebtn">Normal</button>
+<button id="Ghost" class="activebtn">Ghost</button>
+<button id="Fighting" class="activebtn">Fighting</button>
+<button id="Steel" class="activebtn">Steel</button>
+<button id="Dragon" class="activebtn">Dragon</button>
+<button id="Flying" class="activebtn">Flying</button>
+<button id="Grass" class="activebtn">Grass</button>
+<button id="Psychic" class="activebtn">Psychic</button>
+<button id="Rock" class="activebtn">Rock</button>
+
+</div>
+<div class="pokemon-container-group">
+
+</div>
+</section>
  <footer>
   <div id="footer-div"> 
    <h3 id="footer-title">Created by David and Martin under MIT license</h3>
   </div>
  </footer>
+  <div class="modal-background display-none">
+    <div class="modal">
+			<div class="modal-title">Bulbasaur</div>
+			<div class="modal-content">
+				<div class="modal-left-container">
+					<div class="modal-image-container bg-animate">
+						<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="Pokemon1" class="modal-image">
+					</div>
+					<div class="modal-data-container">
+						<ul class="modal-data-list">
+						</ul>
+					</div>
+				</div>
+				<div class="modal-stats-container">
+					<ul class="modal-stats-list">
+					</ul>
+				</div>
+			</div>
+			<div class="modal-comments-container">
+			<div class="modal-comments">
+				<p class="modal-comments-title">Comments <span class="comments-count">2</span></p>
+				<ul class="modal-comments-list">
+				</ul>
+			</div>
+			<div class="modal-form-container bg-animate">
+				<form class="modal-form-comment">
+					<p class="modal-form-title">Add a comment</p>
+					<input class="modal-form-input" type="text" name="name" id="name" placeholder="Your name" required>
+					<input class="modal-form-input" type="text" name="comment" id="comment" placeholder="Your comment" required>
+					<input type="hidden" name="itemId" id="itemId">
+					<input class="modal-form-button" type="submit" value="Comment">
+				</form>
+			</div>
+		
+		</div>
+			<button type="button" class="button-close">&#10006</button>
+		</div>
+  </div>
+	<div class="wrapper display-none">
+		<div class="pokeball">
+		</div>
+	</div>
 </body>
 </html>
