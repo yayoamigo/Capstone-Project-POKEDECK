@@ -12,6 +12,7 @@ const commentsList = document.querySelector('.modal-comments-list');
 const itemIdNode = document.querySelector('#itemId');
 
 const spinner = (state) => {
+  console.log('SPINNER', state);
   if (state) {
     spinnerNode.classList.remove('display-none');
   } else {
@@ -37,7 +38,7 @@ const render = (data) => {
   modalDataList.innerHTML = '';
   types.forEach((type) => {
     const list = document.createElement('li');
-    list.innerHTML = `<li class="modal-data-item ${type.type.name}">${type.type.name}</li>`;
+    list.innerHTML = `<li class="modal-data-item bg-${type.type.name}">${type.type.name}</li>`;
     modalDataList.appendChild(list);
   });
   commentsList.innerHTML = '';
