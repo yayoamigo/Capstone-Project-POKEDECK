@@ -29,7 +29,7 @@ const addDisplayBtn = () => {
 pokebtn.addEventListener('click', addDisplayPoke);
 catebtn.addEventListener('click', addDisplayBtn);
 
-// Toogle pages --end--
+// Toogle page --end--
 
 loopPokemons(200);
 categoryBtn.forEach((name) => {
