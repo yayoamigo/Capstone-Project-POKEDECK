@@ -9,6 +9,14 @@ function removeChildNodes(parent) {
   }
 }
 
+const openModal = (e) => {
+  const id = e.target.id.substring(e.target.id.indexOf('-') + 1, e.target.id.length);
+  spinner(true);
+  Pokemon.getPokemon(id).then(
+    (result) => show(result),
+  );
+};
+
 const renderPokemons = (pokemon, category) => {
   const types = pokemon.types[0].type.name;
   let pokemonContainer;
@@ -79,11 +87,7 @@ const renderPokemons = (pokemon, category) => {
     });
     const commentBtn = pokemonContainer.querySelector(`#commentBtn-${pokemon.id}`);
     commentBtn.addEventListener('click', (e) => {
-      const id = e.target.id.substring(e.target.id.indexOf('-') + 1, e.target.id.length);
-      spinner(true);
-      Pokemon.getPokemon(id).then(
-        (result) => show(result),
-      );
+      openModal(e);
     });
   }
 };
