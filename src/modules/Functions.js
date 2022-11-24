@@ -12,7 +12,6 @@ const commentsList = document.querySelector('.modal-comments-list');
 const itemIdNode = document.querySelector('#itemId');
 
 const spinner = (state) => {
-  console.log('SPINNER', state);
   if (state) {
     spinnerNode.classList.remove('display-none');
   } else {
