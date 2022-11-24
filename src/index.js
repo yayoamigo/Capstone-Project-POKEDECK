@@ -2,11 +2,10 @@ import './styles.css';
 import loopPokemons from './modules/pokemons.js';
 import Pokemon from './modules/Pokemon.js';
 import Comment from './modules/Comments.js';
-import { show, spinner } from './modules/Functions.js';
+import { show } from './modules/Functions.js';
 
 const closeButton = document.querySelector('.button-close');
 const modal = document.querySelector('.modal-background');
-const random = document.querySelector('#random');
 const form = document.querySelector('.modal-form-comment');
 const pokebtn = document.getElementById('poke');
 const catebtn = document.getElementById('catego');
@@ -41,13 +40,13 @@ closeButton.addEventListener('click', () => {
   modal.classList.add('display-none');
 });
 
-random.addEventListener('click', () => {
-  spinner(true);
-  const randomNumber = Math.ceil(Math.random() * 1153) + 1;
-  Pokemon.getPokemon(randomNumber).then(
-    (result) => show(result),
-  );
-});
+// random.addEventListener('click', () => {
+//   spinner(true);
+//   const randomNumber = Math.ceil(Math.random() * 1153) + 1;
+//   Pokemon.getPokemon(randomNumber).then(
+//     (result) => show(result),
+//   );
+// });
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();

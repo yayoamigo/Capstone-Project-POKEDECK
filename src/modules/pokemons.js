@@ -1,3 +1,6 @@
+import { postLikes } from './APIlikes.js';
+import likeCount from './counters.js';
+
 function removeChildNodes(parent) {
   while (parent.firstChild) {
     parent.removeChild(parent.firstChild);
@@ -36,12 +39,42 @@ const renderPokemons = (pokemon, category) => {
     TYPE.classList.add('TYPE');
     TYPE.textContent = types.toUpperCase();
 
+    const countsContainer = document.createElement('div');
+    countsContainer.classList.add('countsContainer');
+    const likeCont = document.createElement('div');
+    likeCont.classList.add('likeDiv');
+    const heart = document.createElement('i');
+    heart.classList.add('fa-regular');
+    heart.classList.add('fa-heart');
+    heart.classList.add('likeBtn');
+    heart.id = `btn-${pokemon.id}`;
+    const num = document.createElement('span');
+    num.classList.add('numLikes');
+    num.textContent = '0';
+    const comment = document.createElement('button');
+    comment.classList.add('commentBtn');
+    comment.id = `commentBtn-${pokemon.id}`;
+    comment.textContent = 'comment';
+    countsContainer.appendChild(comment);
+    likeCont.appendChild(num);
+    likeCont.appendChild(heart);
+    countsContainer.appendChild(likeCont);
+
+    likeCount(pokemon.id, num);
+
     card.appendChild(gifContainer);
     card.appendChild(number);
     card.appendChild(name);
     card.appendChild(TYPE);
+    card.append(countsContainer);
 
     pokemonContainer.appendChild(card);
+    const likeBtn = pokemonContainer.querySelector(`#btn-${pokemon.id}`);
+    likeBtn.addEventListener('click', (e) => {
+      const id = e.target.id.substring(e.target.id.indexOf('-') + 1, e.target.id.length);
+      postLikes(id);
+      likeCount(id, e.target.previousSibling);
+    });
   }
 };
 // Fetch function

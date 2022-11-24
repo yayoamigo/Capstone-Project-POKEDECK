@@ -722,3 +722,36 @@ body {
   color: #3466af;
   background: #ffcb05;
 }
+
+.countsContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  width: 50%;
+  margin-top: 15px;
+  align-items: center;
+  gap: 10px;
+}
+
+.likeBtn {
+  cursor: pointer;
+  color: #ff473d;
+}
+
+.likeDiv {
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+}
+
+.countsContainer button {
+  color: #3466af;
+  background: #ffcb05;
+  cursor: pointer;
+  border: 1px solid black;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2px;
+}
