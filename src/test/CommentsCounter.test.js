@@ -1,60 +1,48 @@
-import Comment from '../modules/Comments.js';
 import commentsCount from '../modules/CommentsCounter.js';
 
-const expectedFetchResponse = [
-  {
-    comment: 'This is nice!',
-    creation_date: '2021-01-10',
-    username: 'John',
-  },
-  {
-    comment: 'Great content!',
-    creation_date: '2021-02-10',
-    username: 'Jane',
-  },
+let expectedFetchResponse = [
 ];
 
-global.fetch = jest.fn(() =>
-  Promise.resolve({
-    json: () => Promise.resolve(expectedFetchResponse),
-  })
-);
-
-
+global.fetch = jest.fn(() => Promise.resolve({
+  json: () => Promise.resolve(expectedFetchResponse),
+}));
 
 beforeEach(() => {
   fetch.mockClear();
+  expectedFetchResponse = [];
 });
 
 const addComment = jest.fn((data) => {
   expectedFetchResponse.push(data);
 });
 
+const newData = {
+  comment: 'Great content!',
+  creation_date: '2021-02-10',
+  username: 'Jane',
+};
+
 describe('Testing', () => {
-  
-  test('Fetch have been called', async () => {
-    const b = commentsCount(1);
+  test('Fetch have been called and result count equal 0', async () => {
+    const b = await commentsCount(1);
     expect(fetch).toHaveBeenCalled();
+    expect(b).toBe(0);
   });
-  test('Fetch have been called 2 times', async () => {
-    const d = commentsCount(1);
-    const c = commentsCount(2);
-    expect(fetch).toHaveBeenCalledTimes(2);
-  });
-  test('Fetch have been called with 1', async () => {
+  test('Comment Count first time equal 0', async () => {
     const e = await commentsCount(2);
-    expect(e).toBe(1);
+    expect(e).toBe(0);
   });
-  test('Add post and Count equal 3', async () => {
-    
-
-    const newData = {
-      comment: 'Great content!',
-      creation_date: '2021-02-10',
-      username: 'Jane',
-    }
+  test('Add post and Count equal 1', async () => {
     addComment(newData);
-    const f = await commentsCount(2)
-  })
-
+    const f = await commentsCount(2);
+    expect(f).toBe(1);
+  });
+  test('Add 5 comments and Count response equal 5', async () => {
+    const totalCount = 5;
+    for (let i = 1; i <= totalCount; i += 1) {
+      addComment(newData);
+    }
+    const result = await commentsCount(2);
+    expect(result).toBe(5);
+  });
 });

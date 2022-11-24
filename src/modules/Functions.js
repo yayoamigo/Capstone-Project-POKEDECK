@@ -27,7 +27,10 @@ const render = (data) => {
   const comments = result.error ? [] : result;
   itemIdNode.value = id;
   commentsCount(id).then(
-    result => count.textContent = result
+    (result) => {
+      count.textContent = result;
+      return result;
+    },
   );
   titleNode.textContent = name.toUpperCase();
   imageNode.src = `${imageEndpoint}${id}.png`;
