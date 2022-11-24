@@ -24,32 +24,15 @@ body {
 
 .none {
   display: none;
-<<<<<<< HEAD
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  overflow-y: hidden;
-  overflow-x: hidden;
-=======
->>>>>>> 9b5016b0fb3956bb47c8bd9dd890580a326958bc
 }
 
 #footer-div {
   display: flex;
   border: 1px solid black;
-<<<<<<< HEAD
-  width: 100%;
-  justify-content: center;
-  margin-top: 12%;
-  position: absolute;
-  bottom: 0;
-=======
   position: absolute;
   bottom: 0;
   width: 100%;
   justify-content: center;
->>>>>>> 9b5016b0fb3956bb47c8bd9dd890580a326958bc
 }
 
 .header-container {
@@ -444,10 +427,6 @@ body {
 
   .header-links-container {
     padding: 12px;
-<<<<<<< HEAD
-    padding: 0;
-=======
->>>>>>> 9b5016b0fb3956bb47c8bd9dd890580a326958bc
     gap: 0;
   }
 
@@ -478,8 +457,6 @@ body {
   }
 }
 
-<<<<<<< HEAD
-=======
 .display-none {
   display: none;
 }
@@ -541,7 +518,6 @@ body {
   100% { background-position: 0% 51%; }
 }
 
->>>>>>> 9b5016b0fb3956bb47c8bd9dd890580a326958bc
 .pokemon-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -745,7 +721,6 @@ body {
   cursor: pointer;
   color: #3466af;
   background: #ffcb05;
-<<<<<<< HEAD
 }
 
 .display-none {
@@ -807,6 +782,4 @@ body {
   0% { background-position: 0% 51%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 51%; }
-=======
->>>>>>> 9b5016b0fb3956bb47c8bd9dd890580a326958bc
 }
