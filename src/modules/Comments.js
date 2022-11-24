@@ -5,15 +5,14 @@ export default class Comment {
   static getComments = async (id) => {
     const URL = `${endpoint}${apiKey}/comments?item_id=${id}`;
     try {
-      const result = await fetch(URL)
-      .then((data) => data.json())
-      if(result.error) {
+      const result = await fetch(URL).then((data) => data.json());
+      if (result.error) {
         return [];
       }
       return result;
     } catch (error) {
-      console.log('TRYCATCH ERROR', error)
-      }
+      return error;
+    }
   }
 
   static postComments = async (data) => {
