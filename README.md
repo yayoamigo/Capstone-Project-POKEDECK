@@ -46,6 +46,8 @@ Pokemon API is a web application based on external APIs. We selected an API that
 - GitHub: [@yayoamigo](https://github.com/yayoamigo)
 - Twitter: [@carpediem0011](https://twitter.com/carpediem0011)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/david-zambrano-corral-b87a4198/)
+
+
 👤 **Martin Perez**
 
 - GitHub: [mperezbazan](https://github.com/mperezbazan)
