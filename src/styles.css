@@ -26,11 +26,16 @@ body {
   display: none;
 }
 
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 #footer-div {
   display: flex;
   border: 1px solid black;
-  position: absolute;
-  bottom: 0;
   width: 100%;
   justify-content: center;
 }
