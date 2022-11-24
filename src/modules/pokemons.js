@@ -1,11 +1,21 @@
 import { postLikes } from './APIlikes.js';
 import likeCount from './counters.js';
+import { show, spinner } from './Functions.js';
+import Pokemon from './Pokemon.js';
 
 function removeChildNodes(parent) {
   while (parent.firstChild) {
     parent.removeChild(parent.firstChild);
   }
 }
+
+const openModal = (e) => {
+  const id = e.target.id.substring(e.target.id.indexOf('-') + 1, e.target.id.length);
+  spinner(true);
+  Pokemon.getPokemon(id).then(
+    (result) => show(result),
+  );
+};
 
 const renderPokemons = (pokemon, category) => {
   const types = pokemon.types[0].type.name;
@@ -74,6 +84,10 @@ const renderPokemons = (pokemon, category) => {
       const id = e.target.id.substring(e.target.id.indexOf('-') + 1, e.target.id.length);
       postLikes(id);
       likeCount(id, e.target.previousSibling);
+    });
+    const commentBtn = pokemonContainer.querySelector(`#commentBtn-${pokemon.id}`);
+    commentBtn.addEventListener('click', (e) => {
+      openModal(e);
     });
   }
 };

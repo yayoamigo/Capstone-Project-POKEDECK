@@ -1,4 +1,5 @@
 import Comment from './Comments.js';
+import commentsCount from './CommentsCounter.js';
 
 const titleNode = document.querySelector('.modal-title');
 const imageNode = document.querySelector('.modal-image');
@@ -24,8 +25,14 @@ const render = (data) => {
     id, name, stats, types, result,
   } = data;
   const comments = result.error ? [] : result;
+  count.textContent = 0;
   itemIdNode.value = id;
-  count.textContent = comments.length;
+  commentsCount(id).then(
+    (result) => {
+      count.textContent = result;
+      return result;
+    },
+  );
   titleNode.textContent = name.toUpperCase();
   imageNode.src = `${imageEndpoint}${id}.png`;
   modalStatsList.innerHTML = '';
@@ -37,7 +44,7 @@ const render = (data) => {
   modalDataList.innerHTML = '';
   types.forEach((type) => {
     const list = document.createElement('li');
-    list.innerHTML = `<li class="modal-data-item ${type.type.name}">${type.type.name}</li>`;
+    list.innerHTML = `<li class="modal-data-item bg-${type.type.name}">${type.type.name}</li>`;
     modalDataList.appendChild(list);
   });
   commentsList.innerHTML = '';

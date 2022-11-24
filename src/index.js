@@ -40,14 +40,6 @@ closeButton.addEventListener('click', () => {
   modal.classList.add('display-none');
 });
 
-// random.addEventListener('click', () => {
-//   spinner(true);
-//   const randomNumber = Math.ceil(Math.random() * 1153) + 1;
-//   Pokemon.getPokemon(randomNumber).then(
-//     (result) => show(result),
-//   );
-// });
-
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const { name, comment, itemId } = e.target;
@@ -71,4 +63,10 @@ form.addEventListener('submit', (e) => {
         throw new Error('Error creating post');
       }
     });
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target.id === 'modal') {
+    modal.classList.add('display-none');
+  }
 });
