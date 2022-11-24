@@ -3,7 +3,7 @@ import loopPokemons from './modules/pokemons.js';
 import Pokemon from './modules/Pokemon.js';
 import Comment from './modules/Comments.js';
 import { show, spinner } from './modules/Functions.js';
- 
+
 const closeButton = document.querySelector('.button-close');
 const modal = document.querySelector('.modal-background');
 const random = document.querySelector('#random');
@@ -13,42 +13,41 @@ const catebtn = document.getElementById('catego');
 const home = document.querySelector('.home');
 const catego = document.querySelector('.categories');
 const categoryBtn = document.querySelectorAll('.activebtn');
- 
- 
+
 // Toogle pages --start--
 const addDisplayPoke = () => {
   home.classList.replace('none', 'active');
   catego.classList.replace('active', 'none');
 };
- 
+
 const addDisplayBtn = () => {
   home.classList.replace('active', 'none');
   catego.classList.replace('none', 'active');
 };
- 
+
 pokebtn.addEventListener('click', addDisplayPoke);
 catebtn.addEventListener('click', addDisplayBtn);
- 
+
 // Toogle page --end--
- 
+
 loopPokemons(200);
 categoryBtn.forEach((name) => {
   name.addEventListener('click', () => {
     loopPokemons(300, name.id.toLowerCase());
   });
 });
- 
+
 closeButton.addEventListener('click', () => {
   modal.classList.add('display-none');
 });
 
-// random.addEventListener('click', () => {
-//   spinner(true);
-//   const randomNumber = Math.ceil(Math.random() * 1153) + 1;
-//   Pokemon.getPokemon(randomNumber).then(
-//     (result) => show(result),
-//   );
-// });
+random.addEventListener('click', () => {
+  spinner(true);
+  const randomNumber = Math.ceil(Math.random() * 1153) + 1;
+  Pokemon.getPokemon(randomNumber).then(
+    (result) => show(result),
+  );
+});
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
