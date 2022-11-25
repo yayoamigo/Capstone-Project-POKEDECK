@@ -84,7 +84,6 @@ const renderPokemons = (pokemon, category) => {
       const id = e.target.id.substring(e.target.id.indexOf('-') + 1, e.target.id.length);
       likeCount(id, e.target.previousSibling);
       postLikes(id);
-      
     });
     const commentBtn = pokemonContainer.querySelector(`#commentBtn-${pokemon.id}`);
     commentBtn.addEventListener('click', (e) => {

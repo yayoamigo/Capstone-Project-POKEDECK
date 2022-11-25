@@ -2,15 +2,15 @@ import { getLikes } from './APIlikes.js';
 
 export const updateLike = async (id) => {
   try {
-  const storeLikes = await getLikes();
-  let results = 0;
-  storeLikes.forEach((x) => {
-    if (x.item_id.toString() === id.toString()) {
-      results = x.likes;
-    }
-  });
-  return results;
-  } catch (e){
+    const storeLikes = await getLikes();
+    let results = 0;
+    storeLikes.forEach((x) => {
+      if (x.item_id.toString() === id.toString()) {
+        results = x.likes;
+      }
+    });
+    return results;
+  } catch (e) {
     return e;
   }
 };
