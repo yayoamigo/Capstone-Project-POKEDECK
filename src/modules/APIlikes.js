@@ -2,9 +2,13 @@ const endpoint = 'https://us-central1-involvement-api.cloudfunctions.net/capston
 const apiKey = process.env.COMMENTS_KEY;
 
 export const getLikes = async () => {
-  const response = await fetch(`${endpoint}${apiKey}/likes`);
-  const likeData = await response.json();
-  return likeData;
+  try {
+    const response = await fetch(`${endpoint}${apiKey}/likes`);
+    const likeData = await response.json();
+    return likeData;
+  } catch (e) {
+    return null;
+  }
 };
 
 export const postLikes = async (id) => {
