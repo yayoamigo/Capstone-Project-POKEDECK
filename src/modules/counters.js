@@ -1,6 +1,7 @@
 import { getLikes } from './APIlikes.js';
 
-const updateLike = async (id) => {
+export const updateLike = async (id) => {
+  try {
   const storeLikes = await getLikes();
   let results = 0;
   storeLikes.forEach((x) => {
@@ -8,8 +9,10 @@ const updateLike = async (id) => {
       results = x.likes;
     }
   });
-
   return results;
+  } catch (e){
+    return e;
+  }
 };
 
 const likeCount = async (pokeId, containerI) => {
