@@ -18,11 +18,8 @@ Pokemon API is a web application based on external APIs. We selected an API that
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://yayoamigo.github.io/Capstone-Project-POKEDECK/dist/)
 
-## Video Link
-
-[Project video Link](https://)
 
 ## Getting Started
 
