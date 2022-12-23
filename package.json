@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack serve",
-    "test": "jest"
+    "test": "jest",
+    "start": "webpack serve --open"
   },
   "repository": {
     "type": "git",
