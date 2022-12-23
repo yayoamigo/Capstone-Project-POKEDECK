@@ -1,5 +1,5 @@
 const endpoint = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
-const apiKey = process.env.COMMENTS_KEY;
+const apiKey = 'G6mOb6hFfUwlZAc1oOU5';
 
 export const getLikes = async () => {
   try {
