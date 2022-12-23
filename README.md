@@ -18,7 +18,7 @@ Pokemon API is a web application based on external APIs. We selected an API that
 
 ## Live Demo
 
-[Live Demo Link](https://miftah1991.github.io/Pokemon/dist)
+[Live Demo Link]()
 
 ## Video Link
 
