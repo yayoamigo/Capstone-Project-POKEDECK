@@ -18,7 +18,6 @@ module.exports = {
     hot: true,
   },
   plugins: [
-    new Dotenv({ systemvars: true }),
     new HtmlWebpackPlugin({
       template: './src/template.html',
     }),
